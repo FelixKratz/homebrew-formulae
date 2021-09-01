@@ -10,7 +10,7 @@ class Sketchybar < Formula
     system "make"
     bin.install "#{buildpath}/bin/sketchybar"
     (pkgshare/"examples").install "#{buildpath}/sketchybarrc"
-    (pkgshare/"examples/plugins/").install "#{buildpath}/plugins/*"
+    (pkgshare/"examples/plugins/").install "#{buildpath}/plugins/"
   end
 
   def caveats; <<~EOS

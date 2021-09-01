@@ -9,12 +9,17 @@ class Sketchybar < Formula
     (var/"log/sketchybar").mkpath
     system "make"
     bin.install "#{buildpath}/bin/sketchybar"
-    if (!Dir.exist?('~/.config/sketchybar/'))
-      system "mkdir ~/.config/sketchybar/"
-      system "cp #{buildpath}/sketchybarrc ~/.config/sketchybar/"
-      system "cp -r #{buildpath}/plugins ~/.config/sketchybar/"
-      system "chmod +x ~/.config/sketchybar/plugins/*"
-    end
+    (pkgshare/"examples").install "#{buildpath}/sketchybarrc"
+    (pkgshare/"examples/plugins/").install "#{buildpath}/plugins/*"
+  end
+
+  def caveats; <<~EOS
+    Copy the example configuration into your home directory and make the scripts executable:
+      mkdir ~/.config/sketchybar
+      cp #{opt_pkgshare}/examples/sketchybarrc ~/.config/sketchybar/sketchybarrc
+      cp -r #{opt_pkgshare}/examples/plugins/ ~/.config/sketchybar/
+      chmod +x ~/.config/sketchybar/plugins/*
+    EOS
   end
 
   plist_options :manual => "sketchybar"

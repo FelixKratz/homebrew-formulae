@@ -17,7 +17,8 @@ class Sketchybar < Formula
     Copy the example configuration into your home directory and make the scripts executable:
       mkdir ~/.config/sketchybar
       cp #{opt_pkgshare}/examples/sketchybarrc ~/.config/sketchybar/sketchybarrc
-      cp -r #{opt_pkgshare}/examples/plugins/ ~/.config/sketchybar/
+      mkdir ~/.config/sketchybar/plugins
+      cp -r #{opt_pkgshare}/examples/plugins/ ~/.config/sketchybar/plugins/
       chmod +x ~/.config/sketchybar/plugins/*
     EOS
   end

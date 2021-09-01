@@ -1,4 +1,4 @@
-class SketchyBar < Formula
+class Sketchybar < Formula
   desc "A custom macOS statusbar with shell plugin, interaction and graph support"
   homepage "https://github.com/FelixKratz/SketchyBar"
   url "https://github.com/FelixKratz/SketchyBar/archive/refs/heads/master.zip"

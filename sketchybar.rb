@@ -12,6 +12,7 @@ class SketchyBar < Formula
       system "cp #{buildpath}/sketchybarrc ~/.config/sketchybar/"
       system "cp -r #{buildpath}/plugins ~/.config/sketchybar/"
       system "chmod +x ~/.config/sketchybar/plugins/*"
+    end
   end
 
   plist_options :manual => "sketchybar"

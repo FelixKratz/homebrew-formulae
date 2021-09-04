@@ -1,8 +1,8 @@
 class Sketchybar < Formula
   desc "A custom macOS statusbar with shell plugin, interaction and graph support"
   homepage "https://github.com/FelixKratz/SketchyBar"
-  url "https://github.com/FelixKratz/SketchyBar/archive/refs/tags/v1.0.6_2.tar.gz"
-  sha256 "1931bfe7c27e1aa9b6517240756a3eb2ebf8de6bdafdb1265cca6e1df802cb9f"
+  url "https://github.com/FelixKratz/SketchyBar/archive/refs/tags/v1.0.7.tar.gz"
+  sha256 "4c163edb3839c3302a9659b023e8ca16ea9a64da5097a1301644b625f2e65ffc"
   head "https://github.com/FelixKratz/SketchyBar.git"
 
   def install

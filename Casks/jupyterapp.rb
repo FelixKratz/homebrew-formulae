@@ -9,5 +9,5 @@ cask "jupyterapp" do
     system "make"
   end
 
-  app "#{buildpath}/Products/Applications/JupyterApp.app"
+  app "Products/Applications/JupyterApp.app"
 end

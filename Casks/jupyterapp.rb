@@ -4,10 +4,10 @@ cask "jupyterapp" do
   desc "A simple standalone macOS Jupyter App"
   homepage "https://github.com/FelixKratz/JupyterApp-mac"
   url "https://github.com/FelixKratz/JupyterApp-mac/archive/refs/tags/v1.0.1.tar.gz"
-  sha256 "d9ec705a3cb63d55d44d05ba9a992fe3153e4db617a27663a7f0e4b842e8e107"
+  sha256 "103210d9ac97f0b5914c022c58d594417d354c05d221a7cf710a6db98ee9df69"
 
   preflight do
-    system "make" "copy"
+    system "make"
   end
 
   app "JupyterApp.app"

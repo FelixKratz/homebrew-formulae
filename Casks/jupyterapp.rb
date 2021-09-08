@@ -6,8 +6,8 @@ cask "jupyterapp" do
   sha256 "d5ff604267a6ad6465651830b2eb66647f8665dbc01355ab21881eff255c9084"
 
   preflight do
-    system "make"
+    system "make copy"
   end
 
-  app "Products/Applications/JupyterApp.app"
+  app "JupyterApp.app"
 end

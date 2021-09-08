@@ -1,5 +1,4 @@
 class Jupyterapp < Formula
-  name "JupyterApp"
   desc "A simple standalone macOS Jupyter App"
   homepage "https://github.com/FelixKratz/JupyterApp-mac"
   url "https://github.com/FelixKratz/JupyterApp-mac/archive/refs/tags/v1.0.0.tar.gz"

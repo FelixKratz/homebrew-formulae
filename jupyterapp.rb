@@ -1,4 +1,4 @@
-class Jupyterapp < Cask
+class Jupyterapp < Formula
   name "JupyterApp"
   desc "A simple standalone macOS Jupyter App"
   homepage "https://github.com/FelixKratz/JupyterApp-mac"

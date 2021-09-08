@@ -10,5 +10,4 @@ cask "jupyterapp" do
   end
 
   app "#{buildpath}/Products/Applications/JupyterApp.app"
-  end
 end

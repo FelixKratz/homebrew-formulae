@@ -2,14 +2,18 @@ class Sketchybar < Formula
   env :std
   desc "A custom macOS statusbar with shell plugin, interaction and graph support"
   homepage "https://github.com/FelixKratz/SketchyBar"
-  url "https://github.com/FelixKratz/SketchyBar/archive/refs/tags/v1.4.0.tar.gz"
-  sha256 "887887b0d2341e0bcaeb0acfbab646105aa55e12a61aa4d705d89767459737d2"
+  url "https://github.com/FelixKratz/SketchyBar/archive/refs/tags/v1.4.1.tar.gz"
+  sha256 "ca0977814e8414758200a397a340a46bb483f523cd4ac1346b0e8e35bbc118e2"
   head "https://github.com/FelixKratz/SketchyBar.git"
+  license "GPLv3"
+
+  depends_on "cmake"
 
   def install
     (var/"log/sketchybar").mkpath
     ENV.delete('CFLAGS')
     ENV.delete('CXXFLAGS')
+    system "cmake", "."
     system "make"
     bin.install "#{buildpath}/bin/sketchybar"
     (pkgshare/"examples").install "#{buildpath}/sketchybarrc"

@@ -12,8 +12,9 @@ class Sketchybar < Formula
   def install
     (var/"log/sketchybar").mkpath
     ENV.delete('CFLAGS')
+    ENV.delete('LDFLAGS')
     ENV.delete('CXXFLAGS')
-    system "cmake", "."
+    system "cmake", ".", *[]
     system "make"
     bin.install "#{buildpath}/bin/sketchybar"
     (pkgshare/"examples").install "#{buildpath}/sketchybarrc"

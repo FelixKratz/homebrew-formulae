@@ -3,12 +3,12 @@
 # frozen_string_literal: true
 
 # sketchybar.rb
-class Sketchybar < Formula
+class Sketchybarv1 < Formula
   env :std
   desc "Custom macOS statusbar with shell plugin, interaction and graph support"
   homepage "https://github.com/FelixKratz/SketchyBar"
-  url "https://github.com/FelixKratz/SketchyBar/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "2822b58d689b4c2bf36c33f26f1f72a32c3db2cccf980a1f0b0306f5bf012066"
+  url "https://github.com/FelixKratz/SketchyBar/archive/refs/tags/v1.4.3.tar.gz"
+  sha256 "3e9e605104f39ce2b6c395e3de8af314a0ede48bc2a15cefd28d6258d390b6d0"
   license "GPL-3.0-only"
   head "https://github.com/FelixKratz/SketchyBar.git"
 

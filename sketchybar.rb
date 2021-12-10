@@ -25,6 +25,7 @@ class Sketchybar < Formula
     (var/"log/sketchybar").mkpath
     system "cmake", "."
     system "make"
+    system "codesign", "--force", "-s", "-", "#{buildpath}/bin/sketchybar"
     bin.install "#{buildpath}/bin/sketchybar"
     (pkgshare/"examples").install "#{buildpath}/sketchybarrc"
     (pkgshare/"examples").install "#{buildpath}/plugins/"

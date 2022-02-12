@@ -14,9 +14,9 @@ class Svim < Formula
 
   def install
     bin.install "#{buildpath}/svim"
-    (pkgshare/"examples").install "#{buildpath}/examples/svimrc"
-    (pkgshare/"examples").install "#{buildpath}/examples/blacklist"
-    (pkgshare/"examples").install "#{buildpath}/examples/svim.sh"
+    (pkgshare/"examples").install "#{buildpath}/svimrc"
+    (pkgshare/"examples").install "#{buildpath}/blacklist"
+    (pkgshare/"examples").install "#{buildpath}/svim.sh"
   end
 
   def caveats

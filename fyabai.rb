@@ -2,7 +2,7 @@
 
 # frozen_string_literal: true
 
-# sketchybar.rb
+# fyabai.rb
 class Fyabai < Formula
   env :std
   desc "Fork of Yabai for my personal use"

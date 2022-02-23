@@ -12,7 +12,23 @@ class Svim < Formula
   license "GPL-3.0-only"
   head "https://github.com/FelixKratz/SketchyVim.git"
 
+  def clear_env
+    ENV.delete("CFLAGS")
+    ENV.delete("LDFLAGS")
+    ENV.delete("CXXFLAGS")
+  end
+
+
   def install
+    if build.head?
+      clear_env
+      system "make"
+      system "cp", "bin/svim", "svim"
+      system "cp", "examples/svim.sh", "svim.sh"
+      system "cp", "examples/blacklist", "blacklist"
+      system "cp", "examples/svimrc", "svimrc"
+    end
+
     bin.install "#{buildpath}/svim"
     (pkgshare/"examples").install "#{buildpath}/svimrc"
     (pkgshare/"examples").install "#{buildpath}/blacklist"

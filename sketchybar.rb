@@ -23,8 +23,12 @@ class Sketchybar < Formula
   def install
     clear_env
     (var/"log/sketchybar").mkpath
-    system "cmake", "."
-    system "make"
+    if build.head?
+      system "make"
+    else
+      system "cmake", "."
+      system "make"
+    end
     system "codesign", "--force", "-s", "-", "#{buildpath}/bin/sketchybar"
     bin.install "#{buildpath}/bin/sketchybar"
     (pkgshare/"examples").install "#{buildpath}/sketchybarrc"

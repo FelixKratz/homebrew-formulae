@@ -7,12 +7,10 @@ class Sketchybar < Formula
   env :std
   desc "Custom macOS statusbar with shell plugin, interaction and graph support"
   homepage "https://github.com/FelixKratz/SketchyBar"
-  url "https://github.com/FelixKratz/SketchyBar/archive/refs/tags/v2.5.0.tar.gz"
-  sha256 "298a3c825224fce5cc5af888cbc6a55e2b36fb150d1b0073a9ff496d836e365d"
+  url "https://github.com/FelixKratz/SketchyBar/archive/refs/tags/v2.5.1.tar.gz"
+  sha256 "a0398e8e54ff1dbc32f9bf8061c1247c52370ed26e33c635f9e747b185203bf7"
   license "GPL-3.0-only"
   head "https://github.com/FelixKratz/SketchyBar.git"
-
-  depends_on "cmake"
 
   def clear_env
     ENV.delete("CFLAGS")
@@ -23,12 +21,7 @@ class Sketchybar < Formula
   def install
     clear_env
     (var/"log/sketchybar").mkpath
-    if build.head?
-      system "make"
-    else
-      system "cmake", "."
-      system "make"
-    end
+    system "make"
     system "codesign", "--force", "-s", "-", "#{buildpath}/bin/sketchybar"
     bin.install "#{buildpath}/bin/sketchybar"
     (pkgshare/"examples").install "#{buildpath}/sketchybarrc"

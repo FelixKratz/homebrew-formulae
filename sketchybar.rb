@@ -21,7 +21,12 @@ class Sketchybar < Formula
   def install
     clear_env
     (var/"log/sketchybar").mkpath
-    system "make"
+    if MacOS.version < 11
+      system "make", "x86"
+    else
+      system "make"
+    end
+
     system "codesign", "--force", "-s", "-", "#{buildpath}/bin/sketchybar"
     bin.install "#{buildpath}/bin/sketchybar"
     (pkgshare/"examples").install "#{buildpath}/sketchybarrc"

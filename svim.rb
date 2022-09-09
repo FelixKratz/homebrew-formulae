@@ -7,8 +7,8 @@ class Svim < Formula
   env :std
   desc "Turns macOS input fields into real vim buffers"
   homepage "https://github.com/FelixKratz/SketchyVim"
-  url "https://github.com/FelixKratz/SketchyVim/releases/download/v1.0.8/bundle_1.0.8.tgz"
-  sha256 "3ffa40a9357f8d7f0c8cf6e23f2038c280eac9591a66545d02d3c20871b45100"
+  url "https://github.com/FelixKratz/SketchyVim/releases/download/v1.0.9/bundle_1.0.9.tgz"
+  sha256 "24b524a58020376f60fb9097c5ec497f9a9f797925e142a4855f9fab992f82c3"
   license "GPL-3.0-only"
   head "https://github.com/FelixKratz/SketchyVim.git"
 

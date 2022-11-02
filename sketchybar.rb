@@ -7,8 +7,8 @@ class Sketchybar < Formula
   env :std
   desc "Custom macOS statusbar with shell plugin, interaction and graph support"
   homepage "https://github.com/FelixKratz/SketchyBar"
-  url "https://github.com/FelixKratz/SketchyBar/archive/refs/tags/v2.10.1.tar.gz"
-  sha256 "80ede360272c164f4f93cbec418b044c4805a60287438b33bec638e80971568e"
+  url "https://github.com/FelixKratz/SketchyBar/archive/refs/tags/v2.11.0.tar.gz"
+  sha256 "1598f55658c13a39013ec7c55f568d3cb8998e17588b47e9a3e56869988b58ce"
   license "GPL-3.0-only"
   head "https://github.com/FelixKratz/SketchyBar.git"
 

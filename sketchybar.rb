@@ -49,6 +49,8 @@ class Sketchybar < Formula
     environment_variables PATH: std_service_path_env, LANG: "en_US.UTF-8"
     keep_alive true
     process_type :interactive
+    log_path "#{var}/log/sketchybar/sketchybar.out.log"
+    error_log_path "#{var}/log/sketchybar/sketchybar.err.log"
   end
 
   test do

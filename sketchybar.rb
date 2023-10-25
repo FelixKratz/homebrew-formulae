@@ -7,8 +7,8 @@ class Sketchybar < Formula
   env :std
   desc "Custom macOS statusbar with shell plugin, interaction and graph support"
   homepage "https://github.com/FelixKratz/SketchyBar"
-  url "https://github.com/FelixKratz/SketchyBar/archive/refs/tags/v2.17.1.tar.gz"
-  sha256 "3a07a7cd354f85047f6e7d8aff2ad6cb273d2b578e44b713686dc309d3cce33a"
+  url "https://github.com/FelixKratz/SketchyBar/archive/refs/tags/v2.18.0.tar.gz"
+  sha256 "0e27087bc94919cfb9231be2584226ecc5e03858d2625034c1764cce9e8d4c95"
   license "GPL-3.0-only"
   head "https://github.com/FelixKratz/SketchyBar.git"
 
@@ -31,6 +31,21 @@ class Sketchybar < Formula
     bin.install "#{buildpath}/bin/sketchybar"
     (pkgshare/"examples").install "#{buildpath}/sketchybarrc"
     (pkgshare/"examples").install "#{buildpath}/plugins/"
+
+    # Install documentation files
+    man.mkpath
+    system "curl", "https://felixkratz.github.io/SketchyBar/documentation.tar.gz", "-o", "#{buildpath}/documentation.tar.gz"
+    system "tar", "-xzvf", "#{buildpath}/documentation.tar.gz", "-C", "#{buildpath}/"
+    man1.install "#{buildpath}/sketchybar.1"
+    man5.install "#{buildpath}/sketchybar.5"
+    man5.install "#{buildpath}/sketchybar-animate.5"
+    man5.install "#{buildpath}/sketchybar-components.5"
+    man5.install "#{buildpath}/sketchybar-events.5"
+    man5.install "#{buildpath}/sketchybar-items.5"
+    man5.install "#{buildpath}/sketchybar-popup.5"
+    man5.install "#{buildpath}/sketchybar-query.5"
+    man5.install "#{buildpath}/sketchybar-tips.5"
+    man5.install "#{buildpath}/sketchybar-types.5"
   end
 
   def caveats

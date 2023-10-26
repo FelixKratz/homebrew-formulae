@@ -51,7 +51,7 @@ class Sketchybar < Formula
   def caveats
     <<~EOS
       Copy the example configuration into your home directory and make the scripts executable:
-        mkdir ~/.config/sketchybar
+        mkdir -p ~/.config/sketchybar
         cp #{opt_pkgshare}/examples/sketchybarrc ~/.config/sketchybar/sketchybarrc
         mkdir ~/.config/sketchybar/plugins
         cp -r #{opt_pkgshare}/examples/plugins/ ~/.config/sketchybar/plugins/

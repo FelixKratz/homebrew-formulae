@@ -12,6 +12,8 @@ class Borders < Formula
   license "GPL-3.0-only"
   head "https://github.com/FelixKratz/JankyBorders.git"
 
+  depends_on :macos => :sonoma
+
   def clear_env
     ENV.delete("CFLAGS")
     ENV.delete("LDFLAGS")

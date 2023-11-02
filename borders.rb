@@ -7,10 +7,10 @@ class Borders < Formula
   env :std
   desc "A window border system for macOS"
   homepage "https://github.com/FelixKratz/JankyBorders"
-  url "https://github.com/FelixKratz/JankyBorders/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "37acc706c882366f4ce51f50235f9039d5f15de94483c7ebf072ce3ff2b42375"
+  url "https://github.com/FelixKratz/JankyBorders/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "74efed2f879324b185721b9dc506853c040ab0912f22cca044a12edf63d0a099"
   license "GPL-3.0-only"
-  head "https://github.com/FelixKratz/JankyBorders.git"
+  head "https://github.com/FelixKratz/JankyBorders.git", branch: "main"
 
   depends_on :macos => :sonoma
 

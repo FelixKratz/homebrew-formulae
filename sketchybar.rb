@@ -7,8 +7,8 @@ class Sketchybar < Formula
   env :std
   desc "Custom macOS statusbar with shell plugin, interaction and graph support"
   homepage "https://github.com/FelixKratz/SketchyBar"
-  url "https://github.com/FelixKratz/SketchyBar/archive/refs/tags/v2.20.0.tar.gz"
-  sha256 "38cd25b19dcfd6bb34f87e95504afc5fdd36664f460556befe4db87be867785b"
+  url "https://github.com/FelixKratz/SketchyBar/archive/refs/tags/v2.20.1.tar.gz"
+  sha256 "044523ea5793e1565b8d15ff9084f1203bb39dd06625d3bb2b6a69dfde3ceae0"
   license "GPL-3.0-only"
   head "https://github.com/FelixKratz/SketchyBar.git"
 
@@ -51,9 +51,8 @@ class Sketchybar < Formula
   def caveats
     <<~EOS
       Copy the example configuration into your home directory and make the scripts executable:
-        mkdir -p ~/.config/sketchybar
+        mkdir -p ~/.config/sketchybar/plugins
         cp #{opt_pkgshare}/examples/sketchybarrc ~/.config/sketchybar/sketchybarrc
-        mkdir ~/.config/sketchybar/plugins
         cp -r #{opt_pkgshare}/examples/plugins/ ~/.config/sketchybar/plugins/
         chmod +x ~/.config/sketchybar/plugins/*
     EOS

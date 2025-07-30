@@ -55,6 +55,9 @@ class Sketchybar < Formula
         cp #{opt_pkgshare}/examples/sketchybarrc ~/.config/sketchybar/sketchybarrc
         cp -r #{opt_pkgshare}/examples/plugins/ ~/.config/sketchybar/plugins/
         chmod +x ~/.config/sketchybar/plugins/*
+
+      You will need to install the “Hack Nerd Font” package, otherwise squared question marks 🯄  will be displayed instead of icons when using the default configuration of the bar:
+        brew install --cask font-hack-nerd-font
     EOS
   end
 

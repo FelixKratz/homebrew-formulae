@@ -7,8 +7,8 @@ class Borders < Formula
   env :std
   desc "A window border system for macOS"
   homepage "https://github.com/FelixKratz/JankyBorders"
-  url "https://github.com/FelixKratz/JankyBorders/archive/refs/tags/v1.8.0.tar.gz"
-  sha256 "c43eafb886c65a7322238adb55e2c97783c3c4ea634acefb654e7051b9252562"
+  url "https://github.com/FelixKratz/JankyBorders/archive/refs/tags/v1.8.1.tar.gz"
+  sha256 "ecc3133c91a86429b5938593aa88e94ac77d64c67d23816cc7e9ee2631ecf0ea"
   license "GPL-3.0-only"
   head "https://github.com/FelixKratz/JankyBorders.git", branch: "main"
 
